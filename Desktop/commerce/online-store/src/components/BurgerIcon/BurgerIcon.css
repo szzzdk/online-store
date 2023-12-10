@@ -1,0 +1,24 @@
+
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    float: right;
+}
+  
+.bar {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    transition: transform 0.4s;
+}
+  
+.bar.open {
+    transform: rotate(-45deg);
+    width: 30px;
+    margin: 5px 0;
+}
+  
