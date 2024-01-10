@@ -1,0 +1,120 @@
+
+
+.nav-link-underline {
+  position: relative;
+}
+
+.container {
+  padding: 0 !important;
+}
+
+.custom-navbar {
+  width: 1200px;
+  margin: auto;
+}
+
+
+.navbar-text {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #171818;; /* Цвет подчеркивания */
+  left: 50%; 
+  transform: translateX(-50%);
+  transition: width 0.3s ease 0s; 
+}
+
+.nav-link-underline:hover::after {
+  width: 100%; /* При наведении мыши, подчеркивание будет полным */
+}
+
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Настроить уровень прозрачности */
+  z-index: 1; /* Поместите слой над основным контентом, но под сайдбаром */
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.overlay.open {
+  display: block;
+}
+
+@media(max-width: 1220px) {
+  .custom-navbar {
+      width: 1000px;
+      margin: auto;
+  }   
+}
+
+
+@media(max-width: 1020px) {
+.custom-navbar {
+    width: 970px;
+    margin: auto;
+}   
+}
+
+@media(max-width: 1000px) {
+.custom-navbar {
+    width: 900px;
+    margin: auto;
+}   
+}
+
+@media(max-width: 945px) {
+.custom-navbar {
+    width: 700px;
+    margin: 0 auto;
+}
+}
+
+
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    width: 100%;
+  }
+  .navbar-brand {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar-brand img {
+    width: 200px; /* Adjust the width as needed */
+  }
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9); /* Background color when menu is open */
+  }
+  .contact-info {
+    display: none; /* Hide the contact info in the navbar */
+  }
+  .navbar-text {
+    margin-top: 15px;
+  }
+}
+
+/* Styles for open menu */
+.navbar-collapse.open {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 150px; /* Adjust the width as needed */
+  }
+}

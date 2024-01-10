@@ -1,0 +1,143 @@
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;; /* Цвет подчеркивания */
+    left: 50%; 
+    transform: translateX(-50%);
+    transition: width 0.3s ease 0s;   
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.social-link {
+    position: relative;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 160px;
+    background-color: #1C1C1C;
+}
+
+.footer__container a:hover, .footer__container a:focus {
+    text-decoration: none;
+
+}
+
+.footer__phone {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.footer__mail {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.city {
+    margin: 80px 0;
+    color: white;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin: 80px 0;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.social-link {
+    margin-right: 20px;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo__text {
+    margin: 50px 0;
+    font-size: 18px;
+    line-height: 23px;
+    color: white;
+}
+
+.policy {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@media (max-width: 768px) {
+    .footer__container {
+      flex-direction: column; /* Элементы теперь будут стоять вертикально */
+      padding: 40px; /* Уменьшаем padding */
+    }
+  
+    .footer__left, .footer__right {
+      width: 100%; /* Занимают всю доступную ширину */
+      align-items: center; /* Выравнивание по центру */
+      text-align: center; /* Текст по центру для всех элементов внутри */
+    }
+  
+    .footer__phone, .footer__mail {
+      font-size: 30px; /* Уменьшаем размер текста */
+      line-height: 40px;
+      margin-bottom: 20px; /* Добавляем небольшое пространство после элемента */
+    }
+  
+    .social-links {
+      flex-direction: column; /* Ссылки социальных сетей тоже вертикально */
+      margin: 20px 0; /* Уменьшаем margin */
+    }
+  
+    .social-link {
+      margin: 10px 0; /* Пространство между ссылками */
+    }
+  
+    .city {
+      margin: 20px 0; /* Уменьшаем margin */
+    }
+  
+    .policy {
+      margin-bottom: 20px; /* Пространство внизу для ссылки политики */
+    }
+  }
+  
+  /* Медиа-запрос для мобильных устройств */
+  @media (max-width: 480px) {
+    .footer__phone, .footer__mail {
+      font-size: 20px; /* Еще меньше для мобильных */
+      line-height: 30px;
+    }
+  
+    .city, .logo__text, .policy {
+      font-size: 16px; /* Меньший размер текста */
+      line-height: 20px;
+    }
+  
+    .social-links {
+      flex-direction: row; /* Если хотите, чтобы на мобильных они были в строку */
+      justify-content: center; /* Выравниваем по центру */
+    }
+  
+    .social-link {
+      margin: 0 10px; /* Меньше пространства между ссылками */
+    }
+  }
